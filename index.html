@@ -9,15 +9,18 @@
 </head>
 <body>
     <main>
-        <section id="archive"></section>
-        <section id="formContainer" class="form-container">
+        <section class="side-panel">
+            <button onclick="displayForm()">Add Game</button>
+        </section>
+        <section id="archive" class="archive"></section>
+        <section id="formContainer" class="form-container" style="display: none;">
             <form id="form" class="form">
                 <label for="game title">Game Title</label>
-                <input id="gameTitlegit" type="text" name="game title">
+                <input id="gameTitle" type="text" name="game title">
                 <label for="genre">Genre</label>
                 <input type="text" name="genre" id="gameGenre">
                 <label for="hours">Hours</label>
-                <input type="text" name="hours" id="gameHours">
+                <input type="number" name="hours" id="gameHours">
                 <label for="completed">Completed?</label>
                 <select name="completed" id="gameCompleted">
                     <option value="not completed">Not completed</option>

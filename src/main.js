@@ -4,14 +4,21 @@ const form = document.querySelector('#form')
 let archive = [];
 
 
-function Game(title){
-    this.title = title
-    // this.completed = completed,
+function Game(title, genre, hours, completed){
+    this.title = title,
+    this.genre = genre,
+    this.hours = hours,
+    this.completed = completed
 };
 
 function addGameToLibrary(){
+    // Game values
     let title = document.querySelector('#gameTitle').value;
-    let newGame = new Game(title);
+    let genre = document.querySelector('#gameGenre').value;
+    let hours = document.querySelector('#gameHours').value;
+    let completed = document.querySelector('#gameCompleted').value;
+
+    let newGame = new Game(title,genre,hours,completed);
     archive.push(newGame)
     console.log(archive)
 };
@@ -26,9 +33,16 @@ function displayArchive(){
     gameArchive.innerHTML = '';
     for(let i = 0; i < archive.length; i++){
         let gameTitle = archive[i].title;
+        let gameGenre = archive[i].genre;
+        let gameHours = archive[i].hours;
+        let gameCompleted = archive[i].completed;
+
         let gameCard = document.createElement('div');
         gameCard.innerHTML = `
         <h2>${gameTitle}</h2>
+        <p>${gameGenre}</p>
+        <p>${gameHours} hours</p>
+        <p>${gameCompleted}</p>
         <button class="exit-btn" onclick="removeCard(${i})">&#10006;</button>
         `
         gameCard.classList = 'game-card';

@@ -1,5 +1,6 @@
 const gameArchive = document.querySelector('#archive');
-const form = document.querySelector('#form')
+const formContainer = document.getElementById('formContainer');
+const form = document.querySelector('#form');
 
 let archive = [];
 
@@ -55,10 +56,11 @@ form.addEventListener('submit', (e)=> {
 
     addGameToLibrary();
     displayArchive();
+    formContainer.style.display = 'none'
 });
 
 
 function displayForm(){
-    const formContainer = document.getElementById('formContainer').style.display = 'block';
+    formContainer.style.display = 'block';
 }
 

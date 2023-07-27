@@ -58,3 +58,7 @@ form.addEventListener('submit', (e)=> {
 });
 
 
+function displayForm(){
+    const formContainer = document.getElementById('formContainer').style.display = 'block';
+}
+

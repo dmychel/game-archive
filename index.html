@@ -10,11 +10,20 @@
 <body>
     <main>
         <section id="archive"></section>
-        <section id="gameForm" class="game-form">
-            <form id="form">
+        <section id="formContainer" class="form-container">
+            <form id="form" class="form">
                 <label for="game title">Game Title</label>
-                <input id="gameTitle" type="text" name="game title">
-                <input type="submit" value="Submit">
+                <input id="gameTitlegit" type="text" name="game title">
+                <label for="genre">Genre</label>
+                <input type="text" name="genre" id="gameGenre">
+                <label for="hours">Hours</label>
+                <input type="text" name="hours" id="gameHours">
+                <label for="completed">Completed?</label>
+                <select name="completed" id="gameCompleted">
+                    <option value="not completed">Not completed</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="submit" value="Submit" class="submit-btn">
             </form>
         </section>
     </main>

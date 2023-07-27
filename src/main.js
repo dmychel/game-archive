@@ -40,11 +40,18 @@ function displayArchive(){
 
         let gameCard = document.createElement('div');
         gameCard.innerHTML = `
-        <h2>${gameTitle}</h2>
-        <p>${gameGenre}</p>
-        <p>${gameHours} hours</p>
-        <p>${gameCompleted}</p>
-        <button class="exit-btn" onclick="removeCard(${i})">&#10006;</button>
+        <span>
+            <div class="game-img">
+            <img src="img/placeholder.jpg">
+            <button class="remove-btn" onclick="removeCard(${i})">&#10006;</button>
+            </div>
+            <div class="card-text">
+                <h2>${gameTitle}</h2>
+                <p>${gameGenre}</p>
+                <p>${gameHours} hours</p>
+                <p>${gameCompleted}</p>
+            </div>
+        </span>
         `
         gameCard.classList = 'game-card';
         gameArchive.appendChild(gameCard)

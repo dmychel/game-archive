@@ -1,4 +1,7 @@
 const gameArchive = document.querySelector('#archive');
+const form = document.querySelector('#form')
+
+
 
 
 let archive = [];
@@ -17,13 +20,9 @@ function displayArchive(){
     }
 }
 
-function addGameToArchive(){
-    let game = prompt();
-    newGame = new Game(game);
-    archive.push(newGame);
-    displayArchive();
-}
-
-
-
-addGameToArchive()
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const gameTitle = document.querySelector('#gameTitle');
+    let game =  gameTitle.value;
+    console.log(game)
+})

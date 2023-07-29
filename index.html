@@ -16,9 +16,9 @@
         <section id="formContainer" class="form-container" style="display: none;">
             <form id="form" class="form">
                 <span class="remove-form" onclick="removeForm()">&#10006;</span>
-                <input id="gameTitle" type="text" name="game title" placeholder="Game Title">
-                <input type="text" name="genre" id="gameGenre" placeholder="Genre">
-                <input type="number" name="hours" id="gameHours" placeholder="Hours">
+                <input id="gameTitle" type="text" name="game title" placeholder="Game Title" required>
+                <input type="text" name="genre" id="gameGenre" placeholder="Genre" required>
+                <input type="number" name="hours" id="gameHours" placeholder="Hours" required>
                 <select name="completed" id="gameCompleted">
                     <option value="not completed">Not completed</option>
                     <option value="completed">Completed</option>

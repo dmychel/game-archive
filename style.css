@@ -6,6 +6,7 @@
 :root {
     --background: radial-gradient(circle, rgba(216,216,216,1) 0%, rgba(153,163,163,1) 35%, rgba(75,80,90,1) 100%);
     --secondary-color:#373b43;
+    --font-color: white;
 
 }
 
@@ -14,12 +15,12 @@ main {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    color: var(--font-color);
 }
 
 /* SIDE PANEL */
 
 .side-panel {
-    border: 2px solid;
     padding: 20px;
     background-color: var(--secondary-color);
 }   
@@ -46,7 +47,7 @@ main {
 
 
 .game-card {
-    border: 2px solid black;
+    border: 2px solid rgb(39, 38, 38);
     border-radius: 3px;
     height: 350px;
     width: 250px;
@@ -54,6 +55,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: var(--secondary-color);
+    text-align: center;
 }
 
 .game-img {
@@ -67,6 +69,8 @@ main {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
 .card-text {
@@ -112,6 +116,7 @@ main {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(75, 80, 90, 0.3);
+    border: 2px solid black;
 }
 
 form {

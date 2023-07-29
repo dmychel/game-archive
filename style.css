@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+:root {
+    --background: radial-gradient(circle, rgba(216,216,216,1) 0%, rgba(153,163,163,1) 35%, rgba(75,80,90,1) 100%);
+    --secondary-color:#373b43;
+
+}
+
 main {
     display: flex;
     height: 100vh;
@@ -15,17 +21,25 @@ main {
 .side-panel {
     border: 2px solid;
     padding: 20px;
+    background-color: var(--secondary-color);
 }   
+
+.side-panel img {
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+}
 
 /* ARCHIVE */
 
 .archive {
-    border: 2px solid;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
     gap: 2%;
     padding: 20px;
+    width: 100vw;
+    background: var(--background)
 }
 
 /* GAME CARD */
@@ -39,6 +53,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--secondary-color);
 }
 
 .game-img {
@@ -82,15 +97,21 @@ main {
 /* FORM */
 
 .form-container {
-    /* for center of screen placement */
     top: 50%;
     left: 50%;
     width: 30%;
     height: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #666;
-    background-color: darkcyan;
     position: fixed;
+}
+
+.form-container {
+    background: rgba(75, 80, 90, 0.73);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(75, 80, 90, 0.3);
 }
 
 form {
@@ -100,8 +121,8 @@ form {
     justify-content: center;
     height: 100%;
     width: 100%;
+    background: var(--glassmorphism);
 }
-
 
 input,select {
     width: 50%;
@@ -109,4 +130,18 @@ input,select {
     padding: 5px;
 }
 
+.remove-form {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 3px;
+    cursor: pointer;
+}
 

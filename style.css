@@ -79,7 +79,17 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.card-text p {
+    margin-top: 10px;
+}
+
+.completed-select {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--font-color);
 }
 
 .remove-btn {

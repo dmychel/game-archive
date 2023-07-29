@@ -49,12 +49,18 @@ function displayArchive(){
                 <h2>${gameTitle}</h2>
                 <p>${gameGenre}</p>
                 <p>${gameHours} hours</p>
-                <p>${gameCompleted}</p>
+                <select id="selected">
+                    <option value="not completed">Not completed</option>
+                    <option value="completed">Completed</option>
+                </select>
             </div>
         </span>
         `
+
         gameCard.classList = 'game-card';
-        gameArchive.appendChild(gameCard)
+        gameArchive.appendChild(gameCard);
+        
+        const selected = document.querySelector('#selected').value = `${gameCompleted}`;
     }
 };
 

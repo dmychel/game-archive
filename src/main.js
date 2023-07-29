@@ -71,3 +71,6 @@ function displayForm(){
     formContainer.style.display = 'block';
 }
 
+function removeForm(){
+    formContainer.style.display = 'none'
+}

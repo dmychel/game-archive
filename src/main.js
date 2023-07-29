@@ -49,7 +49,7 @@ function displayArchive(){
                 <h2>${gameTitle}</h2>
                 <p>${gameGenre}</p>
                 <p>${gameHours} hours</p>
-                <select id="selected">
+                <select id="selected" class="completed-select">
                     <option value="not completed">Not completed</option>
                     <option value="completed">Completed</option>
                 </select>

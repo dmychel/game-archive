@@ -3,8 +3,45 @@ const gameArchive = document.querySelector('#archive');
 const formContainer = document.getElementById('formContainer');
 const form = document.querySelector('#form');
 
+// for pre made game
+const ww = document.createElement('img').src = 'img/game-covers/windwakerbox.jpg';
+const la = document.createElement('img').src = 'img/game-covers/links-awakening.jpg';
+const yk = document.createElement('img').src = 'img/game-covers/yakuza.jpg';
+const sonic = document.createElement('img').src = 'img/game-covers/sonic.jpg';
 
-let archive = [];
+const windwaker = { 
+    title: 'The Legend of Zela: The Wind Waker',
+    genre: 'Adventure/Puzzle',
+    hours: 150,
+    completed: 'completed',
+    image: ww
+}
+
+const linksAwakening = {
+    title: 'The Legend of Zela: Link\'s Awakening',
+    genre: 'Adventure/Puzzle',
+    hours: 70,
+    completed: 'completed',
+    image: la
+}
+
+const yakuza = {
+    title: 'Yakuza Kiwami 2 (Sub)',
+    genre: 'Action/Adventure',
+    hours: 70,
+    completed: 'completed',
+    image: yk
+}
+
+const SA2 = {
+    title: 'Sonic Adventure 2 Battle',
+    genre: 'Action/Adventure',
+    hours: 1000,
+    completed: 'completed',
+    image: sonic
+}
+
+let archive = [windwaker,linksAwakening,SA2,yakuza];
 
 
 function Game(title, genre, hours, completed, image){
@@ -21,6 +58,7 @@ function addGameToLibrary(){
     let genre = document.querySelector('#gameGenre').value;
     let hours = document.querySelector('#gameHours').value;
     let completed = document.querySelector('#gameCompleted').value;
+    console.log(completed)
 
     // image url
     let imageFile = document.querySelector('#gameImage');
@@ -101,3 +139,4 @@ function removeForm(){
     formContainer.style.display = 'none'
 }
 
+displayArchive()

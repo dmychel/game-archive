@@ -257,5 +257,7 @@ select {
 
 .card-text:hover {
     opacity: 1; 
-    background-color: rgba(142, 142, 142, 0.493);
+    background-color: rgba(81, 81, 81, 0.676);
+    border: 2px solid coral;
+    border-radius: 3px;
 }

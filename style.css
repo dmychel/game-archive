@@ -23,7 +23,7 @@ main {
 .side-panel {
     padding: 20px;
     background-color: var(--secondary-color);
-}   
+}
 
 .side-panel img {
     height: 20px;
@@ -49,37 +49,48 @@ main {
 .game-card {
     border: 2px solid rgb(39, 38, 38);
     border-radius: 3px;
-    height: 350px;
-    width: 250px;
+    height: 450px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--secondary-color);
     text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .game-img {
-    height: 50%;
+    height: 100%;
     width: 100%;
     position: relative;
-    border-bottom: 2px solid black;
 }
 
 .game-img img {
-    height: 100%;
+    height: 450px;
     width: 100%;
     object-fit: cover;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
 }
 
 .card-text {
-    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.card-text:hover {
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 .card-text p {
@@ -114,7 +125,7 @@ main {
     top: 50%;
     left: 50%;
     width: 30%;
-    height: 50%;
+    height: 60%;
     transform: translate(-50%, -50%);
     position: fixed;
 }
@@ -139,14 +150,24 @@ form {
     background: var(--glassmorphism);
 }
 
-input,select {
+input,
+select {
     width: 50%;
     margin-top: 5%;
     padding: 5px;
 }
 
+.image-label {
+    margin-top: 5%;
+    width: 50%;
+}
+
+.image-upload {
+    margin: 0;
+}
+
 .remove-form {
-      display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
@@ -160,3 +181,77 @@ input,select {
     cursor: pointer;
 }
 
+
+/* MEDIA QUERIES */
+
+
+
+@media (max-width: 1200px) {}
+
+
+/* LAPTOPS */
+@media (max-width: 1024px) {
+    main {
+        background-color: yellow;
+        flex-direction: column;
+    }
+
+    .side-panel img {
+        height: 40px;
+    }
+
+    /* FORM */
+    .form-container {
+        height: 50%;
+        width: 50%;
+    }
+
+    form {
+        gap: 1em;
+    }
+
+    input,
+    select {
+        width: 70%;
+        padding: 10px;
+        font-size: 1.25rem;
+    }
+}
+
+
+/* PHONES */
+
+@media (max-width:480px) {
+    main {
+        background-color: orange;
+    }
+
+    .side-panel img {
+        height: 30px;
+    }
+
+    .archive {
+        justify-content: center;
+        gap: 5%;
+        padding: 0;
+    }
+
+    /* FORM */
+
+    .form-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    form {
+        gap: 2em;
+    }
+
+    .remove-form {
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+        top: 30px;
+        right: 30px;
+    }
+}

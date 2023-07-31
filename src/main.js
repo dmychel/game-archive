@@ -83,6 +83,11 @@ form.addEventListener('submit', (e)=> {
     addGameToLibrary();
     displayArchive();
     formContainer.style.display = 'none'
+
+    let title = document.querySelector('#gameTitle').value = '';
+    let genre = document.querySelector('#gameGenre').value = '';
+    let hours = document.querySelector('#gameHours').value = '';
+    let imageFile = document.querySelector('#gameImage').value = '';
 });
 
 

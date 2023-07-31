@@ -58,9 +58,9 @@ function displayArchive(){
         <span>
             <div class="game-img">
             <img src="${gameImage}">
-            <button class="remove-btn" onclick="removeCard(${i})">&#10006;</button>
             </div>
             <div class="card-text" id="cardText">
+                <button class="remove-btn" onclick="removeCard(${i})">&#10006;</button>
                 <h2>${gameTitle}</h2>
                 <p>${gameGenre}</p>
                 <p>${gameHours} hours</p>

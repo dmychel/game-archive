@@ -5,11 +5,12 @@ const form = document.querySelector('#form');
 let archive = [];
 
 
-function Game(title, genre, hours, completed){
+function Game(title, genre, hours, completed, image){
     this.title = title,
     this.genre = genre,
     this.hours = hours,
-    this.completed = completed
+    this.completed = completed,
+    this.image = image
 };
 
 function addGameToLibrary(){
@@ -19,7 +20,11 @@ function addGameToLibrary(){
     let hours = document.querySelector('#gameHours').value;
     let completed = document.querySelector('#gameCompleted').value;
 
-    let newGame = new Game(title,genre,hours,completed);
+    // image url
+    let imageFile = document.querySelector('#gameImage');
+    let image = imageFile.src = URL.createObjectURL(imageFile.files[0]);
+
+    let newGame = new Game(title,genre,hours,completed,image);
     archive.push(newGame)
     console.log(archive)
 };
@@ -37,12 +42,13 @@ function displayArchive(){
         let gameGenre = archive[i].genre;
         let gameHours = archive[i].hours;
         let gameCompleted = archive[i].completed;
+        let gameImage = archive[i].image;
 
         let gameCard = document.createElement('div');
         gameCard.innerHTML = `
         <span>
             <div class="game-img">
-            <img src="img/placeholder.jpg">
+            <img src="${gameImage}">
             <button class="remove-btn" onclick="removeCard(${i})">&#10006;</button>
             </div>
             <div class="card-text">

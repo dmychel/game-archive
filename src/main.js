@@ -22,9 +22,14 @@ function addGameToLibrary(){
 
     // image url
     let imageFile = document.querySelector('#gameImage');
-    let image = imageFile.src = URL.createObjectURL(imageFile.files[0]);
+    if(imageFile.files.length == 0){
+        console.log('empty')
+    }
+    else {
+        console.log(imageFile.value)
+    }
 
-    let newGame = new Game(title,genre,hours,completed,image);
+    let newGame = new Game(title,genre,hours,completed);
     archive.push(newGame)
     console.log(archive)
 };

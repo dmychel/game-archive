@@ -1,6 +1,8 @@
+// DOM ELEMENTS
 const gameArchive = document.querySelector('#archive');
 const formContainer = document.getElementById('formContainer');
 const form = document.querySelector('#form');
+
 
 let archive = [];
 
@@ -58,7 +60,7 @@ function displayArchive(){
             <img src="${gameImage}">
             <button class="remove-btn" onclick="removeCard(${i})">&#10006;</button>
             </div>
-            <div class="card-text">
+            <div class="card-text" id="cardText">
                 <h2>${gameTitle}</h2>
                 <p>${gameGenre}</p>
                 <p>${gameHours} hours</p>
@@ -69,10 +71,10 @@ function displayArchive(){
             </div>
         </span>
         `
-
         gameCard.classList = 'game-card';
         gameArchive.appendChild(gameCard);
         
+        // set users completed select
         const selected = document.querySelector('#selected').value = `${gameCompleted}`;
     }
 };
@@ -98,3 +100,4 @@ function displayForm(){
 function removeForm(){
     formContainer.style.display = 'none'
 }
+

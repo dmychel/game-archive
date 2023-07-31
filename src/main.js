@@ -22,14 +22,16 @@ function addGameToLibrary(){
 
     // image url
     let imageFile = document.querySelector('#gameImage');
+    let image;
     if(imageFile.files.length == 0){
-        console.log('empty')
+        imageElement = document.createElement('img');
+        image = imageElement.src = 'img/placeholder.jpg';
     }
     else {
-        console.log(imageFile.value)
+       image = imageFile.src = URL.createObjectURL(imageFile.files[0]);
     }
 
-    let newGame = new Game(title,genre,hours,completed);
+    let newGame = new Game(title,genre,hours,completed,image);
     archive.push(newGame)
     console.log(archive)
 };

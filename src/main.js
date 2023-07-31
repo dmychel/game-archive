@@ -4,7 +4,7 @@ const formContainer = document.getElementById('formContainer');
 const form = document.querySelector('#form');
 
 // for pre made game
-const ww = document.createElement('img').src = 'img/game-covers/windwakerbox.jpg';
+const ww = document.createElement('img').src = 'img/game-covers/Windwakerbox.jpg';
 const la = document.createElement('img').src = 'img/game-covers/links-awakening.jpg';
 const yk = document.createElement('img').src = 'img/game-covers/yakuza.jpg';
 const sonic = document.createElement('img').src = 'img/game-covers/sonic.jpg';

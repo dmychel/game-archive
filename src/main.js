@@ -5,9 +5,10 @@ const form = document.querySelector('#form');
 
 // for pre made game
 const ww = document.createElement('img').src = 'img/game-covers/windwaker.jpg';
-const la = document.createElement('img').src = 'img/game-covers/links-awakening.jpg';
+const ykl = document.createElement('img').src = 'img/game-covers/like-dragon.webp';
 const yk = document.createElement('img').src = 'img/game-covers/yakuza.jpg';
 const sonic = document.createElement('img').src = 'img/game-covers/sonic.jpg';
+const gaiden = document.createElement('img').src = 'img/game-covers/ninja-gaiden.jpg';
 
 const windwaker = { 
     title: 'The Legend of Zela: The Wind Waker',
@@ -17,12 +18,12 @@ const windwaker = {
     image: ww
 }
 
-const linksAwakening = {
-    title: 'The Legend of Zela: Link\'s Awakening',
-    genre: 'Adventure/Puzzle',
+const dragon = {
+    title: 'Yakuza: Like a Dragon',
+    genre: 'JRPG',
     hours: 70,
-    completed: 'completed',
-    image: la
+    completed: 'not completed',
+    image: ykl
 }
 
 const yakuza = {
@@ -41,7 +42,15 @@ const SA2 = {
     image: sonic
 }
 
-let archive = [windwaker,linksAwakening,SA2,yakuza];
+const ninja = {
+    title: 'Ninja Gaiden Black',
+    genre: 'Action/Hard...',
+    hours: 50,
+    completed: 'completed',
+    image: gaiden
+}
+
+let archive = [windwaker,dragon,SA2,ninja,yakuza];
 
 
 function Game(title, genre, hours, completed, image){

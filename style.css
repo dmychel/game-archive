@@ -86,11 +86,7 @@ main {
     border: 2px solid black;
     height: 100%;
     width: 100%;
-}
-
-.card-text:hover {
-    opacity: 1;
-    transition: all 0.5s;
+    transition: 0.5s ease-in-out;  
 }
 
 .card-text p {
@@ -254,4 +250,12 @@ select {
         top: 30px;
         right: 30px;
     }
+}
+
+
+/* ANIMATION */
+
+.card-text:hover {
+    opacity: 1; 
+    background-color: rgba(142, 142, 142, 0.493);
 }

@@ -188,8 +188,11 @@ select {
 /* LAPTOPS */
 @media (max-width: 1024px) {
     main {
-        background-color: yellow;
         flex-direction: column;
+    }
+
+    .archive {
+        height: 100vh;
     }
 
     .side-panel img {
@@ -214,10 +217,6 @@ select {
 /* PHONES */
 
 @media (max-width:480px) {
-    main {
-        background-color: orange;
-    }
-
     .side-panel img {
         height: 30px;
     }
@@ -226,6 +225,7 @@ select {
         justify-content: center;
         gap: 5%;
         padding: 0;
+        height: 100vh;
     }
 
     /* FORM */

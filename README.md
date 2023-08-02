@@ -1,4 +1,7 @@
-# VERSION 1.0
+# VERSION 1.1.1
+
+Version 1.1.1 includes local storage for the user and fixes a visual bug when on mobile
+
 # Video Game Archive
 
 This web pages serves as a simple game archive for games you have played and displays them in an ordely clean fashion!

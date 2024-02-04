@@ -4,7 +4,7 @@ Version 1.1.1 includes local storage for the user and fixes a visual bug when on
 
 # Video Game Archive
 
-This web application serves as a simple game archive for games you have played and displays them in an ordely clean fashion! Built with Vanilla JS!
+This web application serves as a simple game archive for games you have played and displays them in an orderly clean fashion! Built with Vanilla JS!
 
 
 ## Installation
